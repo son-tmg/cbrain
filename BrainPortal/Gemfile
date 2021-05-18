@@ -27,6 +27,7 @@ source 'https://rubygems.org'
 #----------------------
 
 gem 'rails', '~> 5.0.6'
+gem 'webpacker'
 
 # Network components mostly
 gem "net-ssh",       :require => 'net/ssh'

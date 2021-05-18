@@ -78,5 +78,13 @@
         url_for(:controller => :signups, :action => :new),
         { tabindex: 4, :class => "action_link" }
    %>
+
+<%= content_tag :div,
+  id: "input_data",
+  name: "blah" do %>
+<% end %>
+
+  <%= javascript_pack_tag 'application' %>
+
 </div>
 

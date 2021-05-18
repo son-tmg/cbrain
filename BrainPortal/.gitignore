@@ -17,3 +17,10 @@ public/assets
 # This will be removed/adjusted in a future CBRAIN release
 seeds_dev_support_dir
 
+
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity

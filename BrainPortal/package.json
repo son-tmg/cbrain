@@ -2,9 +2,18 @@
   "dependencies": {
     "@rails/webpacker": "4.3.0",
     "babel": "^6.23.0",
-    "babel-plugin-syntax-jsx": "^6.18.0"
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "formik": "^2.2.6",
+    "js-polyfills": "^0.1.43",
+    "ramda": "^0.27.1",
+    "ramdam": "^1.6.7",
+    "react-router-dom": "^5.2.0",
+    "styled-components": "^5.3.0",
+    "styled-system": "^5.1.5",
+    "yup": "^0.32.9"
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.13.13",
     "webpack-dev-server": "^3.11.2"
   }
 }

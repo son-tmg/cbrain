@@ -15,19 +15,36 @@
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-console.log('Hello World from Webpacker')
+import React from 'react'
+import ReactDOM from 'react-dom'
+// import PropTypes from 'prop-types'
+// import axios from 'axios'
+// import validations from '../validations'
 
-const First = props => (
-  <div className="name">
-    <h1>Blah</h1>
-  </div>
-)
+// import EventsList from './EventsList'
+// import EventForm from './EventForm'
+// import FormErrors from './FormErrors'
 
+class Eventlite extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>THIS IS my {this.props.name}</h1>
+      </div>
+    )
+  }
+}
+
+// Eventlite.propTypes = {
+//   events: PropTypes.array.isRequired
+// }
 
 document.addEventListener('DOMContentLoaded', () => {
   const node = document.getElementById('input_data')
-  const name = JSON.parse(node.getAttribute('name'))  ReactDOM.render(
-    <First name={name} />,
+  const data = node.getAttribute("data")
+  const data_json = JSON.parse(data)
+  ReactDOM.render(
+    <Eventlite name={data_json.name} />,
     document.body.appendChild(document.createElement('div')),
   )
 })

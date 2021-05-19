@@ -18,8 +18,7 @@ module.exports = function(api) {
   return {
     presets: [
       isTestEnv && [
-        '@babel/preset-env',
-        '@babel/preset-react',
+        require('@babel/preset-env').default,
         {
           targets: {
             node: 'current'
@@ -27,8 +26,7 @@ module.exports = function(api) {
         }
       ],
       (isProductionEnv || isDevelopmentEnv) && [
-        '@babel/preset-env',
-        '@babel/preset-react',
+        require('@babel/preset-env').default,
         {
           forceAllTransforms: true,
           useBuiltIns: 'entry',
@@ -36,11 +34,17 @@ module.exports = function(api) {
           modules: false,
           exclude: ['transform-typeof-symbol']
         }
+      ],
+      [
+        require('@babel/preset-react').default,
+        {
+          development: isDevelopmentEnv || isTestEnv,
+          useBuiltIns: true
+        }
       ]
     ].filter(Boolean),
     plugins: [
       'babel-plugin-macros',
-      '@babel/plugin-syntax-jsx',
       '@babel/plugin-syntax-dynamic-import',
       isTestEnv && 'babel-plugin-dynamic-import-node',
       '@babel/plugin-transform-destructuring',

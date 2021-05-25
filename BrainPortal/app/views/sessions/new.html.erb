@@ -44,27 +44,12 @@
       </tr>
     <% end %>
 
-    <tr>
-      <td><label for="login">Login</label></td>
-      <td class="field">
-        <!--
-        <%= text_field_tag 'login', nil, tabindex: 1 %>
-        -->
-        <div id="login">
-          <% data = {:name => "login", :placeholder => "Enter your username", :append_to => "login"} %>
-          <%= content_tag :div,
-            id: "input_data",
-            data: data.to_json do %>
-              <%= javascript_pack_tag 'src/components/Form/components/Input.js' %>
-          <% end %>
-        </div>
-      </td>
-    </tr>
-
-    <tr>
-      <td><label for="password">Password</label></td>
-      <td class="field"><%= password_field_tag 'password', nil, tabindex: 2 %></td>
-    </tr>
+    <% data = {:append_to => "form_login"} %>
+    <%= content_tag :div,
+      id: "form_login",
+      data: data.to_json do %>
+        <%= javascript_pack_tag 'views/Login/components/LoginForm' %>
+    <% end %>
 
     <tr>
       <td></td>

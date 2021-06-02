@@ -24,7 +24,7 @@
 
 <% title 'Login' %>
 
-<%= form_tag session_path do -%>
+<%= form_tag session_path, :id => 'session' do -%>
 
     <table class="logintable">
 
@@ -57,8 +57,6 @@
       <%= submit_tag 'Sign in', tabindex: 3 %>
       </td>
     </tr>
-
-
 
     <tr>
       <td></td>

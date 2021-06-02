@@ -1,76 +1,88 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useCallback } from "react";
+import { render } from "react-dom";
 import ReactDOM from 'react-dom';
 import PropTypes from "prop-types";
-import { withFormik } from "formik";
+import { Formik, Form, Field, useFormik } from "formik";
 import { ThemeProvider } from "styled-components";
 import Input from "../../../components/Form/components/Input";
+import ErrorMessage from "../../../components/Form/components/ErrorMessage";
 import { theme } from "../../../theme"
 import * as Yup from "yup";
 import * as R from "ramda";
 
-const SessionValidation = Yup.object().shape({
-  username: Yup.string()
-    .trim()
-    .min(0)
-    .required("A valid username is required."),
-  password: Yup.string()
-    .trim()
-    .required("Password is required."),
-});
+const Component = () => (
+  <React.Fragment>
+    <Formik
+      initialValues={{ login: "", password: "" }}
+      onSubmit={async values => {
+        await new Promise(resolve => setTimeout(resolve, 500));
+        alert(JSON.stringify(values, null, 2));
+      }}
+      validationSchema={
+        Yup.object().shape({
+          login: Yup.string()
+            .trim()
+            .min(0)
+            .required("A valid username is required."),
+          password: Yup.string()
+            .trim()
+            .required("Password is required."),
+        })
+      }
+    >
+      {props => {
+        const {
+          values,
+          touched,
+          errors,
+          dirty,
+          isSubmitting,
+          handleChange,
+          handleBlur,
+          handleSubmit,
+          handleReset
+        } = props;
+        return (
+          <form onSubmit={handleSubmit}>
+            <Input
+              style={{ padding: "1rem" }}
+              width={"80%"}
+              placeholder={"Enter your username"}
+              name={"login"}
+              htmlFor={"login"}
+              type={"text"}
+              value={values.login}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              form='session'
+              error={touched.login && errors.login}
+            />
+            {errors.login && touched.login && (
+              <div className="input-feedback">{errors.login}</div>
+            )}
 
-const Component = ({ setFormHandler, setIsSubmitDisabled, ...props }) => {
-  const {
-    errors,
-    handleBlur,
-    handleChange,
-    handleSubmit,
-    touched,
-    values,
-  } = props;
-
-  // useEffect(() => {
-  //   setFormHandler(handleSubmit);
-  // }, [handleSubmit, setFormHandler]);
-
-  // useEffect(() => {
-  //   // Disable the submit until all required fields are completed without errors.
-  //   setIsSubmitDisabled(() => {
-  //     if (R.isEmpty(touched)) {
-  //       return true;
-  //     }
-  //     return !R.isEmpty(errors);
-  //   });
-  // }, [errors, setIsSubmitDisabled, touched]);
-
-  return (
-    <React.Fragment>
-      <Input
-        style={{ padding: "1rem" }}
-        width={"80%"}
-        placeholder={"Enter your username"}
-        name={"login"}
-        htmlFor={"login"}
-        type={"text"}
-        // value={values.login}
-        onChange={handleChange}
-        onBlur={handleBlur}
-        // error={touched.login && errors.login}
-      />
-      <Input
-        style={{ padding: "1rem" }}
-        width={"80%"}
-        placeholder={"Enter your password"}
-        name={"password"}
-        htmlFor={"password"}
-        type={"password"}
-        // value={values.password}
-        onChange={handleChange}
-        onBlur={handleBlur}
-        // error={touched.password && errors.password}
-      />
-    </React.Fragment>
-  );
-};
+            <Input
+              style={{ padding: "1rem" }}
+              width={"80%"}
+              placeholder={"Enter your password"}
+              name={"password"}
+              htmlFor={"password"}
+              type={"password"}
+              value={values.password}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              form='session'
+              error={touched.password && errors.password}
+            />
+            {errors.password && touched.password && (
+              <div className="input-feedback">{errors.password}</div>
+            )}
+          </form>
+        );
+      }}
+    </Formik>
+  </React.Fragment>
+);
 
 Component.propTypes = {
   handleBlur: PropTypes.func,
@@ -82,26 +94,6 @@ Component.propTypes = {
   touched: PropTypes.object,
   values: PropTypes.object,
 };
-
-Component.displayName = "LoginForm";
-
-export default withFormik({
-  mapPropsToValues: () => ({
-    username: "",
-    password: "",
-  }),
-  handleSubmit: async (values, { props }) => {
-    const { username, password } = values;
-    const status = await props.loginMutation({
-      variables: {
-        login: username,
-        password,
-      },
-    });
-    return status;
-  },
-  validationSchema: SessionValidation,
-})(Component);
 
 document.addEventListener('DOMContentLoaded', () => {
   const node = document.getElementById('form_login')

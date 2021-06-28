@@ -127,3 +127,14 @@
         <%= f.submit "Create" %>
       </div>
 <% end %>
+
+
+<h1>New Site Form</h1>
+
+<% data = {:append_to => "newSiteForm"} %>
+<%= content_tag :div,
+  id: "newSiteForm",
+  data: data.to_json do %>
+
+    <%= javascript_pack_tag 'views/Sites/components/NewSiteForm' %>
+  <% end %>

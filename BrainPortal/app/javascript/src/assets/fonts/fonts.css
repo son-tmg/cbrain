@@ -1,0 +1,50 @@
+/* NOTE: Importing fonts in a css file to address styled-components font loading issues:
+https://github.com/styled-components/styled-components/issues/1593 */
+
+@font-face {
+  font-family: Heebo;
+  src: url("./heebo-regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: HeeboLight;
+  src: url("./heebo-light.ttf");
+  font-style: normal;
+  font-weight: 300;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url("./OpenSans-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: OpenSansBold;
+  src: url("./OpenSans-Bold.ttf");
+  font-style: normal;
+  font-weight: 700;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: OpenSansSemiBold;
+  src: url("./OpenSans-SemiBold.ttf");
+  font-style: normal;
+  font-weight: 700;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: OpenSansLight;
+  src: url("./OpenSans-Light.ttf");
+  font-style: normal;
+  font-weight: 300;
+  font-display: fallback;
+}

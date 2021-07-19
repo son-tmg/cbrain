@@ -78,9 +78,11 @@
   %>
 <% end %>
 
+<%= content_tag :div,
+  id: "sites",
+  data: @sites.to_json do %>
+
+  <%= javascript_pack_tag 'views/Sites/components/sites' %><% end %>
 
 
-<div id='table' style="padding-top:40px">
-</div>
 
-<%= javascript_pack_tag 'views/Sites/components/Table' %>

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Box, Text } from "../../src/components/globals";
+import { Box, Text } from "../src/components/globals";
 
 export const StyledForm = styled("form").attrs((props) => ({}))`
   display: flex;

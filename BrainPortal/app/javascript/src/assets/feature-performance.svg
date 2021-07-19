@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 800 800" style="enable-background:new 0 0 800 800;" xml:space="preserve">
+
+    <g id="feature_performance" >
+        <path style="display:inline;fill:#E4F1F8;" d="M488,700.5H362.1c-9,0-16.4-7.4-16.4-16.4l13.7-106.7c0-9,7.4-16.4,16.4-16.4h98.5
+            c9,0,16.4,7.4,16.4,16.4l13.7,106.7C504.4,693.1,497,700.5,488,700.5z"/>
+        <circle style="display:inline;fill:#E4F1F8;" cx="401" cy="462" r="15.5"/>
+        <path style="display:inline;fill:#FFFFFF;" d="M675.1,555.4H154.8c-8.7,0-15.8-7.1-15.8-15.8V196.2c0-8.7,7.1-15.8,15.8-15.8h520.3
+            c8.7,0,15.8,7.1,15.8,15.8v343.3C690.9,548.2,683.8,555.4,675.1,555.4z"/>
+        <path style="display:inline;fill:none;stroke:#000000;stroke-width:4;stroke-miterlimit:10;" d="M481,700.5H355.1
+            c-9,0-16.4-7.4-16.4-16.4l13.7-106.7c0-9,7.4-16.4,16.4-16.4h98.5c9,0,16.4,7.4,16.4,16.4l13.7,106.7
+            C497.4,693.1,490,700.5,481,700.5z"/>
+        <path style="display:inline;fill:none;stroke:#e4f1f8;stroke-width:20;stroke-miterlimit:10;" d="M678.5,554.4H139.6
+            c-9,0-16.4-7.4-16.4-16.4V182.3c0-9,7.4-16.4,16.4-16.4h538.9c9,0,16.4,7.4,16.4,16.4v355.6C694.9,547,687.6,554.4,678.5,554.4z"/>
+        <path style="display:inline;fill:none;stroke:#000000;stroke-width:4;stroke-miterlimit:10;" d="M675,544H139.8c-4.4,0-8-3.6-8-8
+            V186c0-4.4,3.6-8,8-8H675c4.4,0,8,3.6,8,8v350C683,540.4,679.4,544,675,544z"/>
+        <path style="display:inline;fill:none;stroke:#000000;stroke-width:4;stroke-miterlimit:10;" d="M683.8,564H125.2
+            c-9.9,0-18-8.1-18-18V178c0-9.9,8.1-18,18-18h558.6c9.9,0,18,8.1,18,18v368C701.8,555.9,693.7,564,683.8,564z"/>
+        <g style="display:inline;">
+            <g>
+                <path style="fill:none;stroke:#49A1D1;stroke-width:53;stroke-miterlimit:10;" d="M208.9,446.2c0-8.4,0.5-16.8,1.6-24.9"/>
+                <path style="fill:none;stroke:#49A1D1;stroke-width:53;stroke-miterlimit:10;stroke-dasharray:51.4836,51.4836;" d="M223.6,371.6
+                    C252.9,300.2,323.1,250,405.1,250c91,0,167.5,61.9,189.7,146"/>
+                <path style="fill:none;stroke:#49A1D1;stroke-width:53;stroke-miterlimit:10;" d="M599.7,421.2c1,8.2,1.6,16.5,1.6,24.9"/>
+            </g>
+        </g>
+        <path style="display:inline;fill:#FFFFFF;" d="M218.9,449.7c0-108.3,87.8-196.2,196.2-196.2s196.2,87.8,196.2,196.2"/>
+        <path style="display:inline;fill:#0E2C45;stroke:#0E2C45;stroke-miterlimit:10;" d="M574.4,437.3l-0.4-2.5
+            c-0.3-2.1-3.6-3.3-7.3-2.8l-145.1,15.5c-3.6-4.8-8.9-8.2-15.2-9.4c-13.4-2.5-26.3,6.4-28.7,19.9c-2.5,13.4,6.4,26.3,19.9,28.7
+            c12.4,2.3,24.4-5.2,28-17L568.1,442C571.9,441.5,574.7,439.3,574.4,437.3z"/>
+    </g>
+</svg>

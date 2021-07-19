@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { ErrorMessage } from "formik";
-import { Box, Text } from "../../../src/components/globals";
+import { Box, Text } from "src/components/globals";
 
 // Error message is a styled formik component that displays as an error if yup validation fails.
 const Component = ({ children, name, ...rest }) => {

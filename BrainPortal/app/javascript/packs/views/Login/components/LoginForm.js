@@ -4,9 +4,9 @@ import ReactDOM from 'react-dom';
 import PropTypes from "prop-types";
 import { Formik, Form, Field, useFormik } from "formik";
 import { ThemeProvider } from "styled-components";
-import Input from "../../../components/Form/components/Input";
-import ErrorMessage from "../../../components/Form/components/ErrorMessage";
-import { theme } from "../../../theme"
+import Input from "src/components/Form/components/Input";
+import ErrorMessage from "src/components/Form/components/ErrorMessage";
+import { theme } from "src/theme"
 import * as Yup from "yup";
 import * as R from "ramda";
 
@@ -107,3 +107,5 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById(append_to).appendChild(document.createElement('div')),
   )
 })
+
+export default Component;

@@ -6,7 +6,7 @@ import {
   Label,
   Text,
   TextArea,
-} from "../../src/components/globals";
+} from "../src/components/globals";
 
 export const StyledForm = styled(Form).attrs((props) => ({
   flex: props.flex || 1,
